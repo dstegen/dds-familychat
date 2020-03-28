@@ -1,6 +1,6 @@
 {
   "name": "dds-familychat",
-  "version": "0.0.1",
+  "version": "0.3.2",
   "description": "small local family chat server",
   "main": "index.js",
   "directories": {
