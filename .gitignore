@@ -1,0 +1,13 @@
+# macOS files
+.DS_Store
+
+# archives
+*.zip
+*.tgz
+
+# external modules
+node_modules
+
+# sessionId & passwd files
+sessionids.json
+passwd.json

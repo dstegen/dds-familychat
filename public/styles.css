@@ -1,0 +1,99 @@
+/*!
+ * public/styles.css
+ * dds-familychat (https://github.com/dstegen/dds-familychat)
+ * Copyright 2020 Daniel Stegen <info@danielstegen.de>
+ * Licensed under MIT (https://github.com/dstegen/dds-familychat/blob/master/LICENSE)
+ */
+
+:root {
+  --startangle: 270deg;
+  --angle: 72deg;
+  --angle1: calc(var(--startangle) + var(--angle));
+  --angle2: calc(var(--startangle) + var(--angle) * 2);
+  --angle3: calc(var(--startangle) + var(--angle) * 3);
+  --angle4: calc(var(--startangle) + var(--angle) * 4);
+  --angle5: calc(var(--startangle) + var(--angle) * 5);
+  --angle6: calc(var(--startangle) + var(--angle) * 6);
+  --diameter: 15rem;
+}
+
+h1 {
+  color: orange;
+  margin-top: 2rem;
+}
+
+div {
+  display: block;
+}
+
+.footer {
+  margin-top: 5rem;
+}
+
+.circle-container {
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  padding: 2.8rem;
+   /*2.8rem = 2rem*1.4 (2rem = half the width of a link with img, 1.4 = sqrt(2))*/
+  /*border: dashed 1px;*/
+  border-radius: 50%;
+  margin: 6rem auto 0;
+}
+.circle-container div.chatter {
+  display: block;
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 10rem; height: 10rem;
+  margin: -5rem;
+  /*border: solid 1px grey;*/
+}
+.circle-container div img {
+  display: block;
+  width: 6rem;
+  margin-left: 2rem;
+}
+.circle-container div video {
+  display: block;
+  width: 6rem;
+  margin-left: 2rem;
+}
+
+.speakbox {
+  margin-top: .5rem !important;
+  font-size: 0.8rem;
+  padding: .5rem;
+  /*
+  text-align: center;
+  border: 1px solid #ddd;
+  max-height: 4rem;
+  overflow: auto;
+  */
+}
+
+.chatter0 {
+  transform: rotate(var(--startangle)) translate(var(--diameter)) rotate(calc(-1 * var(--startangle)));
+}
+.chatter1 {
+  transform: rotate(var(--angle1)) translate(var(--diameter)) rotate(calc(-1 * var(--angle1)));
+}
+.chatter2 {
+  transform: rotate(var(--angle2)) translate(var(--diameter)) rotate(calc(-1 * var(--angle2)));
+}
+.chatter3 {
+  transform: rotate(var(--angle3)) translate(var(--diameter)) rotate(calc(-1 * var(--angle3)));
+}
+.chatter4 {
+  transform: rotate(var(--angle4)) translate(var(--diameter)) rotate(calc(-1 * var(--angle4)));
+}
+.chatter5 {
+  transform: rotate(var(--angle5)) translate(var(--diameter)) rotate(calc(-1 * var(--angle5)));
+}
+.chatter6 {
+  transform: rotate(var(--angle6)) translate(var(--diameter)) rotate(calc(-1 * var(--angle6)));
+}
+
+.form-control {
+  font-size: 0.8rem;
+  padding: 0.25rem;
+}
