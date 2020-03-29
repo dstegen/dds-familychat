@@ -5,7 +5,13 @@
  * Licensed under MIT (https://github.com/dstegen/dds-familychat/blob/master/LICENSE)
  */
 
-$('#chat.current').keyup( function(event) {
+$(document).ready(function () {
+  for (let i=0; i<$('textarea').length; i++) {
+    $('#'+$('textarea')[i].id).scrollTop($('#'+$('textarea')[i].id).height())
+  };
+});
+
+$('textarea.current').keyup( function(event) {
   if (event.keyCode === 13) {
     // start your submit function
     console.log('submit form');
@@ -13,7 +19,7 @@ $('#chat.current').keyup( function(event) {
       url: '/chat', // url where to submit the request
       type : 'GET', // type of action POST || GET
       dataType : 'json', // data type
-      data : { 'id': $('#id.current').val(), 'chat': $('#chat.current').val()}, // post data || get data
+      data : { 'id': $('input.current').val(), 'chat': $('textarea.current').val()}, // post data || get data
       success : function(result) {
           // you can see the result from the console
           // tab of the developer tools
