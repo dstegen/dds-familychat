@@ -11,3 +11,6 @@ node_modules
 # sessionId & passwd files
 sessionids.json
 passwd.json
+
+# personal files
+myfamily
