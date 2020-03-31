@@ -24,9 +24,23 @@ $('textarea.current').keyup( function(event) {
           // you can see the result from the console
           // tab of the developer tools
           console.log(result);
-          location.reload()
+          //location.reload()
       }
     });
   }
   return true;
 });
+
+function logout () {
+  $.ajax({
+    url: '/logout', // url where to submit the request
+    type : 'GET', // type of action POST || GET
+    dataType : 'json', // data type
+    data : { 'id': $('input.current').val(), 'action': 'logout' }, // post data || get data
+    success : function(result) {
+        // you can see the result from the console
+        // tab of the developer tools
+        console.log(result);
+    }
+  });
+}

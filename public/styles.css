@@ -30,6 +30,10 @@ div {
   margin-top: 8rem;
 }
 
+.dds-settings {
+  cursor: pointer;
+}
+
 .circle-container {
   position: relative;
   width: 30rem;
