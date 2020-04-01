@@ -32,15 +32,18 @@ $('textarea.current').keyup( function(event) {
 });
 
 function logout () {
+  const myId = $('input.current').val();
   $.ajax({
     url: '/logout', // url where to submit the request
     type : 'GET', // type of action POST || GET
     dataType : 'json', // data type
-    data : { 'id': $('input.current').val(), 'action': 'logout' }, // post data || get data
+    data : { 'id': myId, 'action': 'logout' }, // post data || get data
     success : function(result) {
         // you can see the result from the console
         // tab of the developer tools
         console.log(result);
+        document.cookie = 'chatterId=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+        location.reload();
     }
   });
 }
