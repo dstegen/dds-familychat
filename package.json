@@ -4,7 +4,9 @@
   "description": "small local family chat server",
   "main": "index.js",
   "directories": {
-    "lib": "lib"
+    "lib": "lib",
+    "media": "media",
+    "public": "public"
   },
   "scripts": {
     "start": "node index.js",
