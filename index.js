@@ -5,11 +5,11 @@
  * Licensed under MIT (https://github.com/dstegen/dds-familychat/blob/master/LICENSE)
  */
 
+// Required modules
 const http = require('http');
 const WebSocket = require('ws');
-
-const getIPs = require('./lib/utils-getIPs');
-const controller = require('./lib/controller');
+const {getIPs} = require('webapputils-ds');
+const router = require('./lib/router');
 
 let port = 8080;
 let wsport = 8080;
@@ -26,7 +26,7 @@ console.log('Available network devices: ');
 console.log(getIPs());
 
 const server = http.createServer( function (request, response) {
-  sendResponse(controller(request, wss, wsport), response);
+  router(request, response, wss, wsport);
 }).listen(port, host, () => console.log('DDS-FamilyChat is online: http://'+host+':'+port+' (wsport:'+wsport+')'));
 
 const wss = new WebSocket.Server({
@@ -35,18 +35,7 @@ const wss = new WebSocket.Server({
 });
 
 wss.on('connection', function connection(ws) {
-	//console.log(ws);
 	ws.on('message', function incoming(message) {
     console.log('received: %s', message);
   });
 });
-
-// Additional function
-
-function sendResponse (sendObj, response) {
-  response.writeHead(sendObj.statusCode, {
-      location: sendObj.location,
-      'set-cookie': sendObj.cookie,
-      'content-type': sendObj.contentType });
-  response.end(sendObj.data);
-}

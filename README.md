@@ -1,5 +1,14 @@
 # DDS-FamilyChat #
-#### Simple familychat server, writin in nodejs ####
+
+#### Simple familychat server, writen in nodejs ####
+
+
+### Example data login credentials: ###
+
+Name: Emmanuel, Philip, Anna, Dave, Lisa
+
+Password: 123
+
 
 ## License Code ##
 

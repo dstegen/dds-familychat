@@ -2,3 +2,4 @@
 
 # exclude public
 public/*
+node_modules/*

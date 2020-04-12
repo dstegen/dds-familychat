@@ -17,7 +17,7 @@ $('textarea.current').keyup( function(event) {
     console.log('submit form');
     $.ajax({
       url: '/chat', // url where to submit the request
-      type : 'GET', // type of action POST || GET
+      type : 'POST', // type of action POST || GET
       dataType : 'json', // data type
       data : { 'id': $('input.current').val(), 'chat': $('textarea.current').val()}, // post data || get data
       success : function(result) {
@@ -35,7 +35,7 @@ function logout () {
   const myId = $('input.current').val();
   $.ajax({
     url: '/logout', // url where to submit the request
-    type : 'GET', // type of action POST || GET
+    type : 'POST', // type of action POST || GET
     dataType : 'json', // data type
     data : { 'id': myId, 'action': 'logout' }, // post data || get data
     success : function(result) {

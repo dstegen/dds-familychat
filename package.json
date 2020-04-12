@@ -1,7 +1,7 @@
 {
   "name": "dds-familychat",
-  "version": "0.3.3",
-  "description": "small local family chat server",
+  "version": "0.4.0",
+  "description": "simple family chat server",
   "main": "index.js",
   "directories": {
     "lib": "lib",
@@ -28,14 +28,12 @@
   },
   "homepage": "https://github.com/dstegen/dds-familychat#readme",
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "bootstrap": "^4.4.1",
-    "formidable": "^1.2.2",
-    "jquery": "^3.4.1",
     "jquery-ui-dist": "^1.12.1",
-    "mimetype": "0.0.8",
-    "popper.js": "^1.16.1",
-    "uuid": "^7.0.2",
-    "ws": "^7.2.3"
+    "webapputils-ds": "^0.4.2"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "*.json"
+    ]
   }
 }
