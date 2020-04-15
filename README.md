@@ -1,6 +1,6 @@
 # DDS-FamilyChat #
 
-#### Simple familychat server, writen in nodejs ####
+#### Simple family chat server, written in nodejs ####
 
 
 ### Example data login credentials: ###
