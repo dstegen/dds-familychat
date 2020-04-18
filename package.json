@@ -29,7 +29,7 @@
   "homepage": "https://github.com/dstegen/dds-familychat#readme",
   "dependencies": {
     "jquery-ui-dist": "^1.12.1",
-    "webapputils-ds": "^0.4.5"
+    "webapputils-ds": "^0.4.6"
   },
   "nodemonConfig": {
     "ignore": [
