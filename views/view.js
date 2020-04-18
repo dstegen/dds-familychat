@@ -65,8 +65,7 @@ function view (request, wss, wsport, obj, curMemberIdIn, lastChatterIdIn) {
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="/node_modules/jquery/dist/jquery.min.js"></script>
         <script src="/node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
-        <script src="/node_modules/popper.js/dist/umd/popper.min.js"></script>
-        <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
         <script src="/public/scripts.js"></script>
         <script>
         // Websockets
